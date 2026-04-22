@@ -28,12 +28,32 @@ z-index:999;
 transition:1s;
 }
 
-.intro h1{
-font-size:60px;
-color:var(--main);
+/* 🔥 GRADIENT LOGO (INTRO + HERO) */
+.intro h1,
+.hero h1{
+font-size:6vw;
+background:linear-gradient(
+270deg,
+#facc15,
+#eab308,
+#f59e0b,
+#b45309
+);
+background-size:400% 400%;
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+animation:gradientMove 6s ease infinite;
 text-shadow:
-0 0 10px var(--main),
-0 0 30px var(--main2);
+0 0 10px rgba(250,204,21,0.6),
+0 0 20px rgba(234,179,8,0.5),
+0 0 40px rgba(180,83,9,0.4);
+}
+
+/* animace gradientu */
+@keyframes gradientMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
 }
 
 /* HERO */
@@ -60,18 +80,7 @@ position:relative;
 z-index:5;
 }
 
-/* 🔥 LOGO NEON */
-.hero h1{
-font-size:6vw;
-color:var(--main);
-text-shadow:
-0 0 5px var(--main),
-0 0 10px var(--main),
-0 0 20px var(--main2),
-0 0 40px var(--main2);
-}
-
-/* 🎮 BUTTON NEON */
+/* 🎮 BUTTON */
 .join{
 margin-top:20px;
 padding:16px 50px;
@@ -111,7 +120,7 @@ padding:100px 20px;
 text-align:center;
 }
 
-/* 🧱 CARDS NEON */
+/* CARDS */
 .grid{
 display:flex;
 gap:20px;
@@ -136,7 +145,7 @@ box-shadow:
 0 0 40px var(--main2);
 }
 
-/* 👑 ROLE COLORS (NECHÁNO) */
+/* ROLE COLORS */
 .majitel{
 color:#a30000;
 font-weight:bold;
@@ -155,7 +164,7 @@ font-weight:bold;
 text-shadow:0 0 10px #007e00;
 }
 
-/* 👤 TEAM */
+/* TEAM */
 .team-grid{
 display:flex;
 justify-content:center;
@@ -207,7 +216,7 @@ text-align:center;
 background:#060b14;
 }
 
-/* 🎵 MUSIC BUTTON NEON */
+/* MUSIC BUTTON */
 .musicBtn{
 position:fixed;
 top:20px;
@@ -223,7 +232,7 @@ box-shadow:
 0 0 20px var(--main2);
 }
 
-/* 📜 RULES */
+/* RULES */
 .rules-box{
 background:var(--dark);
 padding:30px;
@@ -234,7 +243,7 @@ border:1px solid var(--main2);
 box-shadow:0 0 15px rgba(255,140,0,0.4);
 }
 
-/* 🛒 SHOP NEON */
+/* SHOP */
 .shop-btn{
 display:inline-block;
 margin-top:20px;
@@ -259,7 +268,7 @@ box-shadow:
 0 0 80px var(--main2);
 }
 
-/* 🌐 COMMUNITY */
+/* COMMUNITY */
 .community-buttons{
 display:flex;
 justify-content:center;
@@ -268,7 +277,7 @@ margin-top:20px;
 flex-wrap:wrap;
 }
 
-/* 💬 DISCORD NEON */
+/* DISCORD */
 .discord-link{
 padding:15px 35px;
 background:#5865F2;
@@ -289,4 +298,41 @@ box-shadow:
 0 0 20px #5865F2,
 0 0 40px #5865F2,
 0 0 80px #5865F2;
+}
+
+/* ===== A-TEAM ZÁKLAD ===== */
+#team{
+text-align:center;
+}
+
+.team-role{
+margin-bottom:40px;
+}
+
+/* nadpisy */
+.team-role h3{
+text-align:center;
+font-size:22px;
+margin-bottom:15px;
+}
+
+/* layout */
+.team-row{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+/* hráč */
+.player{
+text-align:center;
+}
+
+/* hlava */
+.player img{
+border-radius:10px;
+width:90px;
+height:90px;
 }
