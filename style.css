@@ -164,6 +164,43 @@ font-weight:bold;
 text-shadow:0 0 10px #007e00;
 }
 
+/* ===== A-TEAM ZÁKLAD ===== */
+#team{
+text-align:center;
+}
+
+.team-role{
+margin-bottom:40px;
+}
+
+/* nadpisy */
+.team-role h3{
+text-align:center;
+font-size:22px;
+margin-bottom:15px;
+}
+
+/* layout */
+.team-row{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+/* hráč */
+.player{
+text-align:center;
+}
+
+/* hlava */
+.player img{
+border-radius:10px;
+width:90px;
+height:90px;
+}
+
 /* TEAM */
 .team-grid{
 display:flex;
@@ -216,21 +253,6 @@ text-align:center;
 background:#060b14;
 }
 
-/* MUSIC BUTTON */
-.musicBtn{
-position:fixed;
-top:20px;
-right:20px;
-padding:10px;
-background:var(--main);
-border:none;
-border-radius:8px;
-cursor:pointer;
-z-index:1000;
-box-shadow:
-0 0 10px var(--main),
-0 0 20px var(--main2);
-}
 
 /* RULES */
 .rules-box{
@@ -300,39 +322,4 @@ box-shadow:
 0 0 80px #5865F2;
 }
 
-/* ===== A-TEAM ZÁKLAD ===== */
-#team{
-text-align:center;
-}
 
-.team-role{
-margin-bottom:40px;
-}
-
-/* nadpisy */
-.team-role h3{
-text-align:center;
-font-size:22px;
-margin-bottom:15px;
-}
-
-/* layout */
-.team-row{
-display:flex;
-justify-content:center;
-align-items:center;
-gap:20px;
-flex-wrap:wrap;
-}
-
-/* hráč */
-.player{
-text-align:center;
-}
-
-/* hlava */
-.player img{
-border-radius:10px;
-width:90px;
-height:90px;
-}
