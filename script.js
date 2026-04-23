@@ -1,35 +1,48 @@
-// INTRO
 window.onload = () => {
-setTimeout(()=>{
-document.getElementById("intro").style.display="none";
-},1500);
+    setTimeout(() => {
+        document.getElementById("intro").style.display = "none";
+    }, 1500);
 };
 
 // MUSIC
 let playing = false;
 
-function toggleMusic(){
-let m = document.getElementById("music");
-if(playing){
-m.pause();
-}else{
-m.play();
-}
-playing = !playing;
+function toggleMusic() {
+    let m = document.getElementById("music");
+    if (playing) {
+        m.pause();
+    } else {
+        m.play();
+    }
+    playing = !playing;
 }
 
 // COPY IP
-function copyIP(){
-navigator.clipboard.writeText("play.plugland.cz");
-alert("IP zkopírována!");
+function copyIP() {
+    navigator.clipboard.writeText("play.plugland.cz");
+    alert("IP zkopírována!");
 }
 
 // SCROLL ANIMACE
-function reveal(){
-document.querySelectorAll(".reveal").forEach(el=>{
-if(el.getBoundingClientRect().top < window.innerHeight - 80){
-el.classList.add("active");
-}
-});
+function reveal() {
+    document.querySelectorAll(".reveal").forEach(el => {
+        if (el.getBoundingClientRect().top < window.innerHeight - 80) {
+            el.classList.add("active");
+        }
+    });
 }
 window.addEventListener("scroll", reveal);
+
+// --- NOVÁ FUNKCE PRO PRAVIDLA ---
+function toggleRules() {
+    const content = document.getElementById("rulesContent");
+    const btn = document.getElementById("rulesBtn");
+
+    if (content.classList.contains("expanded")) {
+        content.classList.remove("expanded");
+        btn.innerText = "Zobrazit více";
+    } else {
+        content.classList.add("expanded");
+        btn.innerText = "Zobrazit méně";
+    }
+}
