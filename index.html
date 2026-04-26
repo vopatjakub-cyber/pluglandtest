@@ -74,11 +74,47 @@
 <!-- 📜 PRAVIDLA -->
 <section id="rules" class="section reveal">
   <h2>Pravidla</h2>
+
   <div class="rules-box">
-    <p>1) Základní Respekt</p>
-    <p>2) Zákaz Spamu</p>
-    <p>3) Zákaz Nadávek</p>
-    <p>4) Zákaz Rasismu</p>
+
+   <div class="rules-content" id="rulesContent">
+
+<p>1) Základní Respekt</p>
+<p>a) Zákaz Spamu, reklam, nesmyslných zpráv</p>
+<p>b) Zákaz Nadávek, urážek, zesměšňování</p>
+<p>c) Zákaz Rasismu, diskriminace, vulgarit</p>
+
+<p>d) Zákaz Sexuálních, obtěžujících a nevhodných zpráv</p>
+<p>2) Přísný zákaz urážení členů AT</p>
+<p>3) Zákaz glitchů, bugů a cheatů</p>
+<p>4) Zákaz reklam bez povolení</p>
+
+<p>5) Zákaz obcházení trestu (VPN apod.)</p>
+<p>6) Zákaz využívání cizích staveb bez povolení</p>
+<p>7) Zákaz griefování</p>
+<p>8) Zákaz šíření nepravdivých informací</p>
+
+<p>9) Zákaz okrádání hráčů</p>
+<p>10) Nežádat AT o unban jiného hráče</p>
+<p>11) Zákaz poškozování serveru</p>
+<p>12) Nevyvolávat konflikty</p>
+
+<p>13) Zákaz zneužívání ticketů</p>
+<p>14) Zákaz hledání děr v pravidlech</p>
+<p>15) Zákaz nevhodných reakcí/emoji</p>
+<p>16) Zákaz farem na spawnu</p>
+
+<p>17) Zákaz nevhodných staveb</p>
+<p>18) Každý ručí za svůj účet</p>
+<p>19) Používej správné kanály</p>
+<p>20) Zákaz nevhodného nicku/skinů</p>
+
+</div>
+
+<button class="read-more-btn" onclick="toggleRules()" id="rulesBtn">
+Zobrazit více
+</button>
+
   </div>
 </section>
 
@@ -165,6 +201,40 @@ function reveal() {
 }
 
 window.addEventListener("scroll", reveal);
+</script>
+  <script>
+window.onload = () => {
+  setTimeout(() => {
+    document.getElementById("intro").style.display = "none";
+  }, 1500);
+};
+
+function copyIP(){
+  navigator.clipboard.writeText("play.plugland.cz");
+  alert("IP zkopírována!");
+}
+
+function reveal(){
+  document.querySelectorAll(".reveal").forEach(el=>{
+    if(el.getBoundingClientRect().top < window.innerHeight - 80){
+      el.classList.add("active");
+    }
+  });
+}
+window.addEventListener("scroll", reveal);
+
+function toggleRules(){
+  const content = document.getElementById("rulesContent");
+  const btn = document.getElementById("rulesBtn");
+
+  if(content.classList.contains("expanded")){
+    content.classList.remove("expanded");
+    btn.innerText = "Zobrazit více";
+  } else {
+    content.classList.add("expanded");
+    btn.innerText = "Zobrazit méně";
+  }
+}
 </script>
 
 </body>
