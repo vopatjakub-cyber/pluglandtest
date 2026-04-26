@@ -322,4 +322,59 @@ box-shadow:
 0 0 80px #5865F2;
 }
 
+/* 🔘 READ MORE BUTTON (Minecraft Neon Style) */
+.read-more-btn{
+margin-top:20px;
+padding:10px 30px;
 
+background:linear-gradient(180deg, var(--accent), var(--main2));
+color:#1a1208;
+
+border:none;
+border-radius:8px;
+
+font-weight:bold;
+font-size:14px;
+letter-spacing:1px;
+text-transform:uppercase;
+
+cursor:pointer;
+transition:0.25s;
+
+/* glow efekt */
+box-shadow:
+0 0 10px var(--main),
+0 0 20px var(--main2),
+0 0 40px rgba(180,83,9,0.6);
+}
+
+/* hover efekt */
+.read-more-btn:hover{
+transform:scale(1.08);
+box-shadow:
+0 0 20px var(--main),
+0 0 40px var(--main2),
+0 0 80px var(--main2);
+}
+
+/* klik efekt (Minecraft feel) */
+.read-more-btn:active{
+transform:scale(0.95);
+box-shadow:
+0 0 10px var(--main),
+0 0 20px var(--main2);
+}
+/* zobraz jen první 4 pravidla */
+.rules-content p:nth-child(n+5){
+display:none;
+}
+
+/* po kliknutí zobraz vše */
+.rules-content.expanded p{
+display:block;
+}
+
+/* mezery mezi pravidly */
+.rules-content p{
+margin:6px 0;
+}
